@@ -33,10 +33,12 @@ export function Progress({ pageVies }) {
       style={{ width: `${wit}%` }}
     >
       <div
+        onDragStart={() => setTs(true)}
+        onDragEnd={() => setTs(false)}
         draggable='true'
         onDragCapture={onProgress}
-        style={st ? { opacity: 1 } : null}
-        className="drag-visable">
+        style={st ? { opacity: 0 } : null}
+        className={"drag-visable"}>
         <Arrwleft />
         <Arrwriagth />
       </div>
@@ -44,7 +46,7 @@ export function Progress({ pageVies }) {
         onDragStart={() => setTs(true)}
         onDragEnd={() => setTs(false)}
         draggable="true"
-        style={{ translate: `${progress - 40}px` }}
+        style={{ translate: `${progress}px` }}
         onDragCapture={onProgress}
         className={st ? "circle op" : "circle"}>
         <Arrwleft />

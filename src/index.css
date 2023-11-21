@@ -13,6 +13,17 @@ main {
   width: 100%;
   height: 100vh;
   position: relative;
+  animation: inicio 800ms ease-in-out;
+}
+
+@keyframes inicio {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .img-bg {
@@ -50,6 +61,17 @@ main {
   box-shadow: 0px 10px 20px rgba(70, 69, 69, 0.171);
   padding: 40px;
   padding-top: 60px;
+  animation: card-inicio 1s ease-in;
+}
+
+@keyframes card-inicio {
+  from {
+    scale: 0.8f;
+  }
+
+  to {
+    scale: 1;
+  }
 }
 
 .title {
@@ -88,7 +110,6 @@ main {
 .slider {
   display: flex;
   align-items: center;
-  width: 16%;
   min-width: 6%;
   height: 15px;
   background-color: #0dd5c1;
@@ -159,6 +180,7 @@ menu {
   display: flex;
   list-style: none;
   width: 100%;
+  height: 22px;
   justify-content: flex-end;
   gap: 20px;
 }
@@ -188,6 +210,9 @@ menu {
 }
 
 .discount {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   background-color: #feece4;
   width: 120px;
   text-align: center;
@@ -271,16 +296,27 @@ menu {
   .drag-visable {
     opacity: 1;
   }
+
   .circle {
     display: none;
   }
 }
 
 @media (width < 501px) {
+  .header {
+    position: absolute;
+    top: 80px;
+  }
   .card {
     width: 400px;
     height: 500px;
     justify-content: space-around;
+    padding-top: 30px;
+  }
+
+  .slider {
+    margin-top: -10px;
+    margin-bottom: 30px;
   }
   .slider::after {
     content: "";
@@ -297,5 +333,53 @@ menu {
   }
   .circle {
     display: none;
+  }
+
+  menu {
+    height: 22px;
+    font-size: 15px;
+    gap: 10px;
+    justify-content: center;
+  }
+  .discount {
+    width: auto;
+    padding: 0px 5px 0px 5px;
+  }
+  .discount p {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer ul {
+    align-items: center;
+    opacity: 0.5;
+    margin-bottom: 50px;
+  }
+
+  .footer button {
+    width: 200px;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 30px;
+    font-weight: 600;
+  }
+  .footer button:hover::after {
+    width: 200px;
+  }
+
+  .title {
+    justify-content: center;
+    position: relative;
+  }
+
+  .precing {
+    position: absolute;
+    bottom: -120px;
+    left: 180px;
   }
 }

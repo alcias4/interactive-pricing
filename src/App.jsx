@@ -24,9 +24,9 @@ function App() {
   return (
     <>
       <main>
-        <img className="img-bg" src="./public/bg-pattern.svg" alt="background" />
+        <img className="img-bg" src="./bg-pattern.svg" alt="background" />
         <div className="header">
-          <img src="./public/pattern-circles.svg" alt="" />
+          <img src="./pattern-circles.svg" alt="" />
           <h1>Simple, traffic-based pricing</h1>
           <p>Sing-up for our 30-day trial.No credit card requerid</p>
         </div>
@@ -46,20 +46,20 @@ function App() {
             <li>Monthly Billing</li>
             <Checkbox onclickDes={onclickDes} />
             <li>Yearly Billing</li>
-            <li className="discount">25% discount</li>
+            <li className="discount">25% <p>discount</p></li>
           </menu>
           <section className="footer">
             <ul>
               <li>
-                <img src="./public/icon-check.svg" alt="icon" />
+                <img src="./icon-check.svg" alt="icon" />
                 Unlimited website
               </li>
               <li>
-                <img src="./public/icon-check.svg" alt="icon" />
+                <img src="./icon-check.svg" alt="icon" />
                 100% data ownership
               </li>
               <li>
-                <img src="./public/icon-check.svg" alt="icon" />
+                <img src="./icon-check.svg" alt="icon" />
                 Email reports
               </li>
             </ul>
